@@ -9,9 +9,12 @@ public static class Arrays
     public static double[] MultiplesOf(double number, int length)
     {
         // TODO Problem 1 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // Step 1: Create a new array of doubles with a size equal to length.
+        // Step 2: Loop from index 0 to length - 1 to populate each position in the array.
+        // Step 3: Calculate the multiple by multiplying the starting number by (i + 1) 
+        // so that the first element is number * 1, the second is number * 2, etc.
+        // Step 4: Return the fully populated array.
+
         double[] result = new double[length]; 
         for (int i = 0; i < length; i++)
         {
@@ -30,9 +33,13 @@ public static class Arrays
     public static void RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // Step 1: Handle edge cases where the list is empty, has only 1 element, or rotation amount is 0.
+        // Step 2: Ensure the rotation amount wraps correctly using modulo % in case amount >= data.Count.
+        // Step 3: Determine the split index where the rotated portion starts (data.Count - amount).
+        // Step 4: Extract the rotated portion (elements that will move to the front) using GetRange.
+        // Step 5: Extract the remaining portion (elements that will move to the back) using GetRange.
+        // Step 6: Clear the original list to rebuild it with the rotated order.
+        // Step 7: Add the rotated elements first, followed by the head elements.
 
         if (data == null || data.Count == 0 || amount <= 0)
         
